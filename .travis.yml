@@ -8,11 +8,11 @@ branches:
   - development
 script:
   - npm run-script build
+  - if [[ ${TRAVIS_BRANCH} == "master" ]]; then echo "tried to"; fi;
 cache:
 directories:
   - "node_modules"
 install:
-  - if [[ ${TRAVIS_BRANCH} == "master" ]]; then echo "tried to"; fi;
   - npm install
   - npm install -g firebase-tools
 after_success:

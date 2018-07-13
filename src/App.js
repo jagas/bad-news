@@ -17,6 +17,7 @@ class App extends Component {
         <MuiThemeProvider>
           <FlatButton label="hello" />
           <RaisedButton label="Bye"/>
+          <RaisedButton label="hello again"/>
         </MuiThemeProvider>
       </div>
     );

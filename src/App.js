@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { FlatButton, MuiThemeProvider } from "material-ui";
+import { FlatButton, MuiThemeProvider, RaisedButton } from "material-ui";
 
 class App extends Component {
   render() {
@@ -16,6 +16,7 @@ class App extends Component {
         </p>
         <MuiThemeProvider>
           <FlatButton label="hello" />
+          <RaisedButton label="Bye"/>
         </MuiThemeProvider>
       </div>
     );

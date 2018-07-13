@@ -3,7 +3,7 @@ node_js:
   - "8.0"
 script:
   - npm run-script build
-deploy:
-  provider: firebase
-  token:
-    secure: "1/M6LcVIsZWQrK4PkGSyFiObXJCABLsOuOJRQgvlrLb-k"
+  install:
+    - npm install -g firebase-tools
+  after_success:
+  - firebase deploy --token $FIREBASE_TOKEN

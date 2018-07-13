@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "bad-news"
+    "default": "bad-news",
+    "staging": "bad-news",
+    "development": "bad-news"
   }
 }

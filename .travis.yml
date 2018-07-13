@@ -13,10 +13,10 @@ directories:
   - "node_modules"
 install:
   - if [[ ${TRAVIS_BRANCH} == "master" ]]; then echo "tried to"; fi;
- - npm install
- - npm install -g firebase-tools
+  - npm install
+  - npm install -g firebase-tools
 after_success:
-- if [[ ${TRAVIS_BRANCH} == "master" ]]; then
+  - if [[ ${TRAVIS_BRANCH} == "master" ]]; then
       echo "tried to";
       firebase deploy --token ${FIREBASE_TOKEN};
     else

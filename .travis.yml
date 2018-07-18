@@ -15,16 +15,22 @@ install:
   - npm install
   - npm install -g firebase-tools
 deploy:
-  - provider: script
-    script: - firebase deploy -P development --token ${FIREBASE_TOKEN}
+  - provider: firebase
+    project: "bad-news-dev"
+    token:
+      secure: ${FIREBASE_TOKEN}
     on:
       branch: development
-  - provider: script
-    script: - firebase deploy -P staging --token ${FIREBASE_TOKEN}
+  - provider: firebase
+    project: "bad-news-staging"
+    token:
+      secure: ${FIREBASE_TOKEN}
     on:
       branch: staging
-  - provider: script
-    script: - firebase deploy --token ${FIREBASE_TOKEN}
+  - provider: firebase
+    project: "bad-news"
+    token:
+      secure: ${FIREBASE_TOKEN}
     on:
       branch: master
 

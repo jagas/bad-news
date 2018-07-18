@@ -16,7 +16,7 @@ install:
   - npm install -g firebase-tools
 deploy:
   - provider: script
-    script: scripts/deploy.sh
+    script: bash scripts/deploy.sh
     on:
       branch: development
   - provider: script

@@ -14,20 +14,17 @@ directories:
 install:
   - npm install
   - npm install -g firebase-tools
-  deploy:
+deploy:
   - provider: script
-    script:
-      - firebase deploy -P development --token ${FIREBASE_TOKEN}
+    script: firebase deploy -P development --token ${FIREBASE_TOKEN}
     on:
       branch: development
   - provider: script
-    script:
-      - firebase deploy -P staging --token ${FIREBASE_TOKEN}
+    script: firebase deploy -P staging --token ${FIREBASE_TOKEN}
     on:
       branch: staging
-   - provider: script
-     script:
-      - firebase deploy --token ${FIREBASE_TOKEN}
-      on:
-        branch: master
+  - provider: script
+    script: firebase deploy --token ${FIREBASE_TOKEN}
+    on:
+      branch: master
 

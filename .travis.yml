@@ -15,4 +15,4 @@ install:
   - npm install
   - npm install -g firebase-tools
 after_success:
-  - ./scripts/deploy.sh
+  - bash ./scripts/deploy.sh

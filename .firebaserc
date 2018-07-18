@@ -2,6 +2,6 @@
   "projects": {
     "default": "bad-news",
     "staging": "bad-news",
-    "development": "bad-news"
+    "development": "bad-news-dev"
   }
 }

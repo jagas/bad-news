@@ -15,9 +15,9 @@ install:
   - npm install
   - npm install -g firebase-tools
 after_success:
-- 'if [[ ${TRAVIS_BRANCH} == "master" ]] then
+- if [[ ${TRAVIS_BRANCH} == "master" ]] then
          echo "firebase deploy --token 1/97vArtl4w8jJrcaH-fA2yU2OVyGcu1egvxN_rFP4zpo"
       else
          echo "firebase deploy -P development --token 1/97vArtl4w8jJrcaH-fA2yU2OVyGcu1egvxN_rFP4zpo"
-      fi'
+      fi
 

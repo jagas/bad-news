@@ -1,0 +1,1 @@
+firebase deploy -P development --token ${FIREBASE_TOKEN}
